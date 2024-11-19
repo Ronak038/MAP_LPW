@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            text-decoration: none;
+            padding: 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .nav-links a:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to the Hospital Management System</h1>
+        
+        <div class="nav-links">
+            <a href="{{ url_for('view_patients') }}">View Patients</a>
+            <a href="{{ url_for('view_doctors') }}">View Doctors</a>
+            <a href="{{ url_for('appointments') }}">Book Appointment</a>
+            <a href="{{ url_for('view_appointments') }}">View Appointments</a>
+        </div>
+    </div>
+
+</body>
+</html>

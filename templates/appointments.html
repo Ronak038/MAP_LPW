@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book Appointment</title>
+</head>
+<body>
+    <h1>Book an Appointment</h1>
+    <form method="POST">
+        Patient:
+        <select name="patient_id">
+            {% for patient in patients %}
+            <option value="{{ patient.id }}">{{ patient.name }}</option>
+            {% endfor %}
+        </select><br>
+        Doctor:
+        <select name="doctor_id">
+            {% for doctor in doctors %}
+            <option value="{{ doctor.id }}">{{ doctor.name }}</option>
+            {% endfor %}
+        </select><br>
+        Date and Time: <input type="datetime-local" name="date"><br>
+        Reason: <textarea name="reason"></textarea><br>
+        <input type="submit" value="Book Appointment">
+    </form>
+</body>
+</html>

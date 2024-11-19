@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Appointments</title>
+</head>
+<body>
+    <h1>Appointments</h1>
+    <ul>
+        {% for appointment in appointments %}
+        <li>
+            <strong>{{ appointment.patient.name }}</strong> (Patient)
+            with Dr. <strong>{{ appointment.doctor.name }}</strong> (Doctor)
+            on <strong>{{ appointment.date.strftime('%Y-%m-%d %H:%M') }}</strong> for <strong>{{ appointment.reason }}</strong>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
